@@ -15,11 +15,10 @@
     ?>
     <?php
     $servername="localhost";
-    $username="id20481152_kauan";
-    $password="@Kemsgta1234";
-    $database="id20481152_database";
+    $username="ana";
+    $password="12345678";
     //cria conexão
-    $conn=new mysqli($servername,$username,$password,$database);
+    $conn=new mysqli($servername,$username,$password);
     //testa conexão
     if ($conn->connect_error){
         die("conexão com db falhou:".$conn->connect_error);
