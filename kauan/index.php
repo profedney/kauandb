@@ -27,9 +27,9 @@
     echo"conectado ao db";
     $sql="SELECT nome,sobrenome,telefone FROM agenda";
     $result=$conn -> query($sql);
-    if ($result->num_rows >0 ) {
+    if ($result->num_rows >0){
         while ($row=$result->fetch_assoc()){
-          echo"nome:". $row ["nome"]."sobrenome :"$row ["sobrenome"]."telefone :"$row ["telefone"]."<br>";
+    echo"nome:". $row ["nome"]."sobrenome :"$row ["sobrenome"]."telefone :"$row ["telefone"]."<br>";
             {
         }else {
             echo"table vazia";
