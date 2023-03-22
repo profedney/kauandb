@@ -10,8 +10,8 @@
     <h1> teste php</h1>
     <?php
     //kauan, ana julia, amanda
-    echo"isso é php";
-    echo" kauan";
+    echo "isso é php";
+    echo " kauan";
     ?>
     <?php
     $servername="localhost";
@@ -24,21 +24,17 @@
     if ($conn->connect_error){
         die("conexão com db falhou:".$conn->connect_error);
     }
-    echo"conectado ao db";
+    echo "conectado ao db";
     $sql="SELECT nome,sobrenome,telefone FROM agenda";
-    $result=$conn -> query($sql);
-    if ($result->num_rows >0){
+    $result=$conn->query($sql);
+    if ($result->num_rows > 0){
         while ($row=$result->fetch_assoc()){
-   echo"nome:". $row ["nome"]."sobrenome :"$row ["sobrenome"]."telefone :"$row ["telefone"]."<br>";
-   
-            {
-        }else {
-            echo"table vazia";
-           }
-    
-        
+            echo "nome: " . $row["nome"] . " sobrenome: " . $row["sobrenome"] . " telefone: " . $row["telefone"] . "<br>";
+        }
+    } else {
+        echo "tabela vazia";
+    }
     $conn->close();
     ?>
 </body>
 </html>
-
