@@ -28,15 +28,14 @@
     $sql="SELECT nome,sobrenome,telefone FROM agenda";
     $result=$conn -> query($sql);
     if ($result->num_row >0 ) {
-        while ($row=$result->tetch_assoc()) {
-            echo"nome". $row ["nome"].$row ["sobrenome"].$row ["telefone"]"<br>";
+        while ($row=$result->fetch_assoc()){
+            // echo"nome:". $row ["nome"]."sobrenome :"$row ["sobrenome"]."telefone :"$row ["telefone"]."<br>";
 
         }else {
-            echo"table vazia"
-           
-        }
+            echo"table vazia";
+           }
     
-    }
+        
     $conn->close();
     ?>
 </body>
